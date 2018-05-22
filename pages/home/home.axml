@@ -1,0 +1,87 @@
+<view class="container">
+  <view class="home_banner">
+    <swiper style="height: 100%;" indicator-dots="{{true}}" indicator-color="#fff" indicator-active-color="#4ddea7" autoplay="{{true}}" interval="{{5000}}">
+      <block a:for="{{slider}}">
+        <swiper-item>
+          <view class="home_slider flex_box">
+            <image src="{{item.url}}"/>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <view class="home_tp">
+    <view class="home_tp_inner">
+      <view class="home_tp_title">换购流程</view>
+      <view class="home_tp_process flex_box">
+          <view>选择机型</view>
+          <view class="flex_box home_tp_icon_1"><image src="{{imgUrl}}icon_home_tp.png"/></view>
+          <view>估价旧机</view>
+          <view class="flex_box home_tp_icon_1"><image src="{{imgUrl}}icon_home_tp.png"/></view>
+          <view>换购定价</view>
+          <view class="flex_box home_tp_icon_1"><image src="{{imgUrl}}icon_home_tp.png"/></view>
+          <view>提交订单</view>
+      </view>
+      <view class="home_tp_divide"></view>
+      <view class="home_tp_tag flex_box">
+        <view class="home_tp_t_1 flex_box">
+          <view class="flex_box home_tp_icon_2"><image src="{{imgUrl}}icon_home_get.png"/></view>
+          <view>估价旧机</view>
+          <view>新机到手</view>
+          <view>再寄旧机</view>
+        </view>
+        <view class="home_tp_t_1 flex_box">
+          <view class="flex_box home_tp_icon_2"><image src="{{imgUrl}}icon_home_get.png"/></view>
+          <view>新旧交替</view>
+          <view>如此简单</view>
+          <view>超级划算</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="home_goods">
+    <view class="home_goods_cate_inner common_border">
+      <scroll-view scroll-y="{{false}}" scroll-x="{{true}}" class="home_goods_inner flex_box">
+        <view a:for="{{brand}}" class="home_goods_cate {{chosen === item.id ? 'active' : '' }}" onTap="chooseBrand" data-id="{{item.id}}">{{item.name}}
+          <view class="home_goods_line"></view>
+        </view>
+      </scroll-view>
+    </view>
+    <view class="home_goods_con flex_box">
+      <view class="home_goods_block" a:for="{{goods}}" data-id="{{item.id}}" onTap="goGoodsDetail">
+        <view class="home_goods_b_inner">
+          <view class="home_goods_b_img common_border">
+            <view class="home_goods_b_img_inner flex_box"><image src="{{item.img}}"/></view>
+          </view>
+          <view class="home_goods_b_info">
+            <view class="home_goods_b_name">{{item.name}}</view>
+            <view class="home_goods_b_price">￥ {{item.l_price}}/月起</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="home_ensure">
+    <view class="home_ensure_inner flex_box">
+      <view class="home_ensure_block">
+        <view class="home_ensure_icon flex_box"><image src="{{imgUrl}}icon_home_zheng.png"/></view>
+        <view class="home_ensure_text">全国联保</view>
+        <view class="home_ensure_desc">官方保障售后服务</view>
+      </view>
+      <view class="home_ensure_block">
+        <view class="home_ensure_icon flex_box"><image src="{{imgUrl}}icon_home_mian.png"/></view>
+        <view class="home_ensure_text">信用免押</view>
+        <view class="home_ensure_desc">轻松拥有vivo产品</view>
+      </view>
+      <view class="home_ensure_block">
+        <view class="home_ensure_icon flex_box"><image src="{{imgUrl}}icon_home_kuai.png"/></view>
+        <view class="home_ensure_text">菜鸟物流</view>
+        <view class="home_ensure_desc">快速安全送达</view>
+      </view>
+    </view>
+    <view class="home_ensure_tips">——  本租赁服务由厦门趣店融资租赁有限公司提供服务  ——</view>
+  </view>
+</view>

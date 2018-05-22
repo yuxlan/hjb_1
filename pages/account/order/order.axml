@@ -1,0 +1,50 @@
+<view class="container">
+  <view class="order_nav flex_box common_border">
+    <view class="order_nav_block" onTap="changeNav" data-id='1'>
+      <view class="order_nav_inner {{nav === '1' ? 'active' : ''}}">换购订单</view>
+    </view>
+    <view class="order_nav_block" onTap="changeNav" data-id='2'>
+      <view class="order_nav_inner {{nav === '2' ? 'active' : ''}}">租赁订单</view>
+    </view>
+    <view class="order_nav_block" onTap="changeNav" data-id='3'>
+      <view class="order_nav_inner {{nav === '3' ? 'active' : ''}}">普通订单</view>
+    </view>
+  </view>
+
+  <view class="order_main">
+    <view class="common_divide"></view>
+    <view class="order_con">
+      <view class="order_top flex_box common_border">
+        <view class="order_time">2018-5-20</view>
+        <view class="order_status">已签收</view>
+      </view>
+      <view class="order_goods">
+        <view class="order_goods_inner flex_box">
+          <view class="order_goods_img flex_box">
+            <image src="{{imgUrl}}temp.jpg"/>
+          </view>
+          <view class="order_goods_main">
+            <view class="order_goods_name">唯品自营 | 【标准套餐A】苹果iPhone X 64G 全网通手机</view>
+            <view class="order_goods_tags flex_box">
+              <text>网络：全网通</text>
+              <text>颜色分类:黑色</text>
+              <text>内存:64G</text>
+            </view>
+          </view>
+          <view class="order_goods_right">
+            <view class="order_goods_price">￥7899</view>
+            <view class="order_goods_dyq">抵用券 ￥ 1400</view>
+            <view class="order_goods_dyq order_goods_num">x1</view>
+          </view>
+        </view>
+        <view class="order_goods_total">
+          <text>共1件商品</text>订单金额<text>￥229.30</text>
+        </view>
+      </view>
+      <view class="order_btn flex_box">
+        <view class="order_btn_inner">查看订单</view>
+      </view>
+    </view>
+    <view class="common_divide"></view>
+  </view>
+</view>

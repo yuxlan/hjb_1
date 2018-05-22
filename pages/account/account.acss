@@ -1,0 +1,38 @@
+page {
+    background: #f7f7f7;
+}
+
+.account_b_icon {
+    width: 26rpx;
+    height: 26rpx;
+}
+
+.account_b_text {
+    color: #333333;
+}
+
+.account_block {
+    padding: 30rpx;
+    background: #fff;
+}
+
+.account_service {
+    justify-content: center;
+    padding: 40rpx 0;
+    color: #333333;
+    font-size: 24rpx;
+}
+
+.account_s_line {
+    width: 40rpx;
+    height: 2rpx;
+    background: #333333;
+}
+
+.account_s_text {
+    margin: 0 40rpx;
+}
+
+.account_s_text > text {
+    color: #4ddea7;
+}

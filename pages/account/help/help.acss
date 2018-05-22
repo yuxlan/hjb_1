@@ -1,0 +1,25 @@
+.help_con {
+    padding: 0 30rpx;
+}
+
+.help_title {
+    padding: 30rpx 0;
+    text-align: center;
+    font-weight: 600;
+    font-size: 32rpx;
+}
+
+.help_block {
+    padding: 20rpx 0;
+}
+
+.help_block_title {
+    font-weight: 600;
+    margin-bottom: 15rpx;
+}
+
+.help_block_content {
+    font-size: 24rpx;
+    color: #666666;
+    line-height: 30rpx;
+}

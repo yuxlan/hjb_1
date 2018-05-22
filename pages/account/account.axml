@@ -1,0 +1,25 @@
+<view class="container">
+  <view class="account_block flex_box common_border" onTap="goOrder">
+    <view class="account_b_text">我的订单</view>
+    <view class="account_b_icon flex_box">
+      <image src="{{imgUrl}}icon_left.png"/>
+    </view>
+  </view>
+  <view class="account_block flex_box common_border" onTap="goCoupon">
+    <view class="account_b_text">现金抵用券</view>
+    <view class="account_b_icon flex_box">
+      <image src="{{imgUrl}}icon_left.png"/>
+    </view>
+  </view>
+  <view class="account_block flex_box" onTap="goHelp">
+    <view class="account_b_text">帮助中心</view>
+    <view class="account_b_icon flex_box">
+      <image src="{{imgUrl}}icon_left.png"/>
+    </view>
+  </view>
+  <view class="account_service fixed_box flex_box">
+    <view class="account_s_line"></view>
+    <view class="account_s_text">客服电话：<text>400 179 8999</text></view>
+    <view class="account_s_line"></view>
+  </view>
+</view>

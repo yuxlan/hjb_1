@@ -1,0 +1,310 @@
+<view class="container">
+  <view class="home_banner">
+    <swiper style="height: 100%;" indicator-dots="{{true}}" indicator-color="#b3f1ed" indicator-active-color="#4ddea7" autoplay="{{true}}" interval="{{5000}}">
+      <block a:for="{{slider}}">
+        <swiper-item>
+          <view class="home_slider flex_box">
+            <image src="{{item}}"/>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <view class="detail_divide flex_box">
+    <image src="{{imgUrl}}divide.jpg"/>
+  </view>
+
+  <view class="detail_info common_border">
+    <view class="detail_info_name">{{goodDetail.name}}</view>
+    <view class="detail_info_mprice">最新换购价 ￥ <text>{{goodDetail.m_price}}</text></view>
+    <view class="detail_info_lprice">月租金 ￥ <text>{{goodDetail.l_price}}</text></view>
+    <view class="detail_info_oprice"><text>官网售价</text>￥{{goodDetail.o_price}}</view>
+  </view>
+
+  <view class="detail_tags flex_box" onTap="chooseExplain">
+    <view class="detail_tags_left flex_box">
+      <view class="detail_tl_block flex_box">
+        <view class="detail_tl_icon flex_box">
+          <image src="{{imgUrl}}icon_home_get_1.png"/>
+        </view>
+        <view class="detail_tl_text">买新须知</view>
+      </view>
+      <view class="detail_tl_block flex_box">
+        <view class="detail_tl_icon flex_box">
+          <image src="{{imgUrl}}icon_home_get_1.png"/>
+        </view>
+        <view class="detail_tl_text">全新正品</view>
+      </view>
+      <view class="detail_tl_block flex_box">
+        <view class="detail_tl_icon flex_box">
+          <image src="{{imgUrl}}icon_home_get_1.png"/>
+        </view>
+        <view class="detail_tl_text">售后无忧</view>
+      </view>
+      <view class="detail_tl_block flex_box">
+        <view class="detail_tl_icon flex_box">
+          <image src="{{imgUrl}}icon_home_get_1.png"/>
+        </view>
+        <view class="detail_tl_text">收货须知</view>
+      </view>
+    </view>
+    <view class="detail_tags_right flex_box">
+      <image src="{{imgUrl}}icon_left.png"/>
+    </view>
+  </view>
+
+  <view class="common_divide"></view>
+
+  <view class="detail_detail">
+    <view class="detail_detail_nav common_border flex_box">
+      <view class="detail_detail_nav_outer" data-id='1' onTap="changeNav">
+        <view class="detail_detail_nav_inner {{nav === '1' ? 'active' : ''}}">图文详情</view>
+      </view>
+      <view class="detail_detail_nav_outer" data-id='2' onTap="changeNav">
+        <view class="detail_detail_nav_inner {{nav === '2' ? 'active' : ''}}">商品参数</view>
+      </view>
+      <view class="detail_detail_nav_outer" data-id='3' onTap="changeNav">
+        <view class="detail_detail_nav_inner {{nav === '3' ? 'active' : ''}}">租赁说明</view>
+      </view>
+    </view>
+
+    <view class="detail_detail_img flex_box" a:if="{{nav === '1'}}">
+      <image src="{{goodDetail.detailImg}}"  mode="widthFix"/>
+    </view>
+
+    <view class="detail_params" a:if="{{nav === '2'}}">
+      <view class="detail_params_block common_border flex_box">
+        <view class="detail_params_name">手机类型</view>
+        <view class="detail_params_content">{{goodDetail.tomp}}</view>
+      </view>
+      <view class="detail_params_block common_border flex_box">
+        <view class="detail_params_name">触摸屏类型</view>
+        <view class="detail_params_content">{{goodDetail.tst}}</view>
+      </view>
+      <view class="detail_params_block common_border flex_box">
+        <view class="detail_params_name">主屏尺寸</view>
+        <view class="detail_params_content">{{goodDetail.mss}}</view>
+      </view>
+      <view class="detail_params_block common_border flex_box">
+        <view class="detail_params_name">主屏材质</view>
+        <view class="detail_params_content">{{goodDetail.msm}}</view>
+      </view>
+      <view class="detail_params_block common_border flex_box">
+        <view class="detail_params_name">主屏分辨率</view>
+        <view class="detail_params_content">{{goodDetail.msr}}</view>
+      </view>
+      <view class="detail_params_block common_border flex_box">
+        <view class="detail_params_name">主屏像素密度</view>
+        <view class="detail_params_content">{{goodDetail.spd}}</view>
+      </view>
+      <view class="detail_params_block common_border flex_box">
+        <view class="detail_params_name">窄边框</view>
+        <view class="detail_params_content">{{goodDetail.nb}}</view>
+      </view>
+      <view class="detail_params_block common_border flex_box">
+        <view class="detail_params_name">屏幕占比</view>
+        <view class="detail_params_content">{{goodDetail.sor}}</view>
+      </view>
+      <view class="detail_params_block flex_box">
+        <view class="detail_params_name">其它屏幕参数</view>
+        <view class="detail_params_content">{{goodDetail.osp}}</view>
+      </view>
+    </view>
+
+    <view class="detail_explain" a:if="{{nav === '3'}}">
+      <view class="help_con">
+        <view class="help_title">关于服务</view>
+        <view class="help_block">
+          <view class="help_block_title">关于下单</view>
+          <view class="help_block_content">
+            <view class="help_block_content_q">1.下单预约成功？</view>
+            <view class="help_block_content_a">预约成功，正常情况下信审人员将会在3个工作日内电话联系</view>
+          </view>
+          <view class="help_block_content">
+            <view class="help_block_content_q">1.下单预约成功？</view>
+            <view class="help_block_content_a">预约成功，正常情况下信审人员将会在3个工作日内电话联系</view>
+          </view>
+          <view class="help_block_content">
+            <view class="help_block_content_q">1.下单预约成功？</view>
+            <view class="help_block_content_a">预约成功，正常情况下信审人员将会在3个工作日内电话联系</view>
+          </view>
+        </view>
+        <view class="help_block">
+          <view class="help_block_title">关于下单</view>
+          <view class="help_block_content">
+            <view class="help_block_content_q">1.下单预约成功？</view>
+            <view class="help_block_content_a">预约成功，正常情况下信审人员将会在3个工作日内电话联系</view>
+          </view>
+          <view class="help_block_content">
+            <view class="help_block_content_q">1.下单预约成功？</view>
+            <view class="help_block_content_a">预约成功，正常情况下信审人员将会在3个工作日内电话联系</view>
+          </view>
+          <view class="help_block_content">
+            <view class="help_block_content_q">1.下单预约成功？</view>
+            <view class="help_block_content_a">预约成功，正常情况下信审人员将会在3个工作日内电话联系</view>
+          </view>
+        </view>
+        <view class="help_block">
+          <view class="help_block_title">关于下单</view>
+          <view class="help_block_content">
+            <view class="help_block_content_q">1.下单预约成功？</view>
+            <view class="help_block_content_a">预约成功，正常情况下信审人员将会在3个工作日内电话联系</view>
+          </view>
+          <view class="help_block_content">
+            <view class="help_block_content_q">1.下单预约成功？</view>
+            <view class="help_block_content_a">预约成功，正常情况下信审人员将会在3个工作日内电话联系</view>
+          </view>
+          <view class="help_block_content">
+            <view class="help_block_content_q">1.下单预约成功？</view>
+            <view class="help_block_content_a">预约成功，正常情况下信审人员将会在3个工作日内电话联系</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="common_mask" a:if="{{buy}}" onTap="closeBuy"></view>
+  <view class="fixed_box detail_buy_con" a:if="{{buy}}">
+    <view class="detail_buy_info flex_box common_border">
+      <view class="detail_buy_img flex_box">
+        <image src="{{imgUrl}}temp.jpg"/>
+      </view>
+      <view class="detail_buy_goods">
+        <view class="detail_buy_goods_name flex_box">
+          <view class="detail_buy_price">￥<text>399.00</text></view>
+          <view class="detail_buy_close flex_box" onTap="closeBuy">
+            <image src="{{imgUrl}}icon_close_1.png"/>
+          </view>
+        </view>
+        <view class="detail_buy_yx">已选：“全网通；12个月”</view>
+      </view>
+    </view>
+    <view class="detail_buy_sku">
+      <view class="detail_buy_sku_name">网络</view>
+      <view class="detail_buy_sku_btn flex_box">
+        <view class="detail_buy_sku_btn_1 active">全网通</view>
+      </view>
+    </view>
+    <view class="detail_buy_sku">
+      <view class="detail_buy_sku_name">颜色</view>
+      <view class="detail_buy_sku_btn flex_box">
+        <view class="detail_buy_sku_btn_1">银色</view>
+        <view class="detail_buy_sku_btn_1">深空灰色</view>
+      </view>
+    </view>
+    <view class="detail_buy_sku">
+      <view class="detail_buy_sku_name">内存</view>
+      <view class="detail_buy_sku_btn flex_box">
+        <view class="detail_buy_sku_btn_1">银色</view>
+        <view class="detail_buy_sku_btn_1">深空灰色</view>
+      </view>
+    </view>
+    <view class="detail_buy_sku detail_buy_num flex_box" a:if="{{type === '1' || type === '2'}}">
+      <view class="detail_buy_sku_name detail_buy_num_name">购买数量</view>
+      <view class="detail_buy_num_con flex_box">
+        <view class="detail_buy_num_op">-</view>
+        <view class="detail_buy_num_num">1</view>
+        <view class="detail_buy_num_op">+</view>
+      </view>
+    </view>
+    <view class="detail_buy_fq" a:if="{{type === '1'}}">
+      <view class="detail_buy_fq_name">花呗分期（可选）</view>
+      <view class="detail_buy_sku_btn">
+        <scroll-view scroll-y="{{false}}" scroll-x="{{true}}" class="flex_box">
+          <view class="detail_fq_block">
+            <view class="detail_fq_block_inner">分3期（0手续费）￥899.67/期</view>
+          </view>
+          <view class="detail_fq_block">
+            <view class="detail_fq_block_inner">分3期（0手续费）￥899.67/期</view>
+          </view>
+          <view class="detail_fq_block">
+            <view class="detail_fq_block_inner">分3期（0手续费）￥899.67/期</view>
+          </view>
+        </scroll-view>
+      </view>
+    </view>
+    <view class="detail_buy_sku" a:if="{{type === '3'}}">
+      <view class="detail_buy_sku_name">租期</view>
+      <view class="detail_buy_sku_btn flex_box">
+        <view class="detail_buy_sku_btn_1">银色</view>
+        <view class="detail_buy_sku_btn_1">深空灰色</view>
+      </view>
+    </view>
+    <view class="detail_buy_dyq flex_box" a:if="{{type === '4'}}">
+      <view class="detail_buy_dyq_name">现金抵用券</view>
+      <view class="detail_buy_dyq_side flex_box">无可用券，去估价
+        <view class="detail_buy_dyq_icon flex_box">
+          <image src="{{imgUrl}}icon_left.png"/>
+        </view>
+      </view>
+    </view>
+    <view class="detail_buy_btn">
+      <view class="detail_buy_btn_inner">确定</view>
+    </view>
+  </view>
+
+  <view class="common_mask" onTap="closeExplain" a:if="{{explain}}"></view>
+  <view class="detail_sm fixed_box" a:if="{{explain}}">
+    <view class="detail_sm_title">服务说明</view>
+    <view class="detail_sm_block">
+      <view class="detail_sm_block_title flex_box">
+        <view class="detail_sm_block_title_icon flex_box">
+          <image src="{{imgUrl}}icon_home_get_1.png"/>
+        </view>
+        <view class="detail_sm_block_title_text">买新须知</view>
+      </view>
+      <view class="detail_sm_block_content">买新须知买新须知买新须知买新须知买新须知买新须知买新须知买新须知买新须知买新须知买新须知买新须知买新须知买新须知</view>
+    </view>
+    <view class="detail_sm_block">
+      <view class="detail_sm_block_title flex_box">
+        <view class="detail_sm_block_title_icon flex_box">
+          <image src="{{imgUrl}}icon_home_get_1.png"/>
+        </view>
+        <view class="detail_sm_block_title_text">全新正品</view>
+      </view>
+      <view class="detail_sm_block_content">买新须知买新须知买新须知买新须知买新须知买新须知买新须知买新须知买新须知买新须知买新须知买新须知买新须知买新须知</view>
+    </view>
+    <view class="detail_sm_block">
+      <view class="detail_sm_block_title flex_box">
+        <view class="detail_sm_block_title_icon flex_box">
+          <image src="{{imgUrl}}icon_home_get_1.png"/>
+        </view>
+        <view class="detail_sm_block_title_text">售后无忧</view>
+      </view>
+      <view class="detail_sm_block_content">买新须知买新须知买新须知买新须知买新须知买新须知买新须知买新须知买新须知买新须知买新须知买新须知买新须知买新须知</view>
+    </view>
+    <view class="detail_sm_block">
+      <view class="detail_sm_block_title flex_box">
+        <view class="detail_sm_block_title_icon flex_box">
+          <image src="{{imgUrl}}icon_home_get_1.png"/>
+        </view>
+        <view class="detail_sm_block_title_text">收货须知</view>
+      </view>
+      <view class="detail_sm_block_content">买新须知买新须知买新须知买新须知买新须知买新须知买新须知买新须知买新须知买新须知买新须知买新须知买新须知买新须知</view>
+    </view>
+    <view class="common_divide detail_devide"></view>
+    <view class="detail_sm_close" onTap="closeExplain">关闭</view>
+  </view>
+
+  <view class="detail_bottom fixed_box flex_box">
+    <view class="detail_bottom_left flex_box">
+      <view class="detail_bl_block" data-id="1" onTap="chooseBuy">
+        <view class="detail_bl_icon flex_box">
+          <image src="{{imgUrl}}icon_hb.png"/>
+        </view>
+        <view class="detail_bl_text">花呗分期</view>
+      </view>
+      <view class="detail_bl_block" data-id="2" onTap="chooseBuy">
+        <view class="detail_bl_icon flex_box">
+          <image src="{{imgUrl}}icon_gm.png"/>
+        </view>
+        <view class="detail_bl_text">立即购买</view>
+      </view>
+    </view>
+    <view class="detail_bottom_left detail_bottom_right flex_box">
+      <view class="detail_br_btn" data-id="3" onTap="chooseBuy">超级租赁</view>
+      <view class="detail_br_btn" data-id="4" onTap="chooseBuy">立即换购</view>
+    </view>
+  </view>
+<view>

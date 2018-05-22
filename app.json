@@ -1,0 +1,32 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/goodsDetail/goodsDetail",
+    "pages/account/account",
+    "pages/account/order/order",
+    "pages/account/coupon/coupon",
+    "pages/account/help/help"
+  ],
+  "window": {
+    "defaultTitle": "换机邦"
+  },
+  "tabBar": {
+    "textColor": "#969696",
+    "selectedColor": "#4ddea7",
+    "backgroundColor": "#ffffff",
+    "items": [
+      {
+        "pagePath": "pages/home/home",
+        "name": "首页",
+        "icon": "/images/tab_home.png",
+        "activeIcon": "/images/tab_home_chosen.png"
+      },
+      {
+        "pagePath": "pages/account/account",
+        "name": "我的",
+        "icon": "/images/tab_account.png",
+        "activeIcon": "/images/tab_account_chosen.png"
+      }
+    ]
+  }
+}

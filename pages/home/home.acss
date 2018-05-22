@@ -1,0 +1,145 @@
+.home_banner, .home_slider {
+  width: 100%;
+  height: 428rpx;
+}
+
+.home_tp {
+  padding:30rpx;
+}
+
+.home_tp_title {
+  text-align: center;
+  padding: 0 0 30rpx 0;
+  font-size: 32rpx;
+}
+
+.home_tp_process {
+  padding: 0 30rpx;
+}
+
+.home_tp_icon_1 {
+  width: 24rpx;
+  height: 24rpx;
+}
+
+.home_tp_divide {
+  width: 100%;
+  height: 2rpx;
+  background: #efecef;
+  margin: 20rpx;
+}
+
+.home_tp_t_1 {
+  width: 100%;
+  padding: 0 30rpx;
+  font-size: 20rpx;
+  color: #999;
+}
+
+.home_tp_icon_2 {
+  width: 27rpx;
+  height: 27rpx;
+}
+
+.home_ensure {
+  padding: 30rpx;
+  background: #fffbff;
+}
+
+.home_ensure_inner {
+  padding: 0 30rpx;
+}
+
+.home_ensure_icon {
+  width: 52rpx;
+  height: 52rpx;
+  margin: auto;
+}
+
+.home_ensure_text {
+  text-align: center;
+  margin: 15rpx 0 5rpx;
+}
+
+.home_ensure_desc, .home_ensure_tips {
+  text-align: center;
+  font-size: 20rpx;
+  color: #999;
+}
+
+.home_ensure_tips {
+  margin-top: 40rpx;
+}
+
+.home_goods {
+  background: #e7ebf7;
+  padding: 0 15rpx;
+}
+
+.home_goods_cate_inner {
+  padding: 30rpx 15rpx 0;
+}
+
+.home_goods_cate {
+  width: 20%;
+  min-width: 20%;
+  text-align: center;
+  color: #999;
+}
+
+ .home_goods_line {
+  width: 100%;
+  height: 2rpx;
+  background: none;
+  margin-top: 18rpx;
+}
+
+.home_goods_cate.active {
+  color: #4ddea7;
+}
+
+.home_goods_cate.active .home_goods_line {
+  background: #4ddea7;
+}
+
+.home_goods_con {
+  padding: 15rpx 0;
+  flex-wrap: wrap;
+}
+
+.home_goods_block {
+  padding: 15rpx;
+  width: 50%;
+  max-width: 50%;
+  box-sizing: border-box;
+}
+
+.home_goods_b_inner {
+  background: #fff;
+  border-radius: 10rpx;
+}
+
+.home_goods_b_img {
+  padding: 40rpx;
+}
+
+.home_goods_b_img_inner {
+  width: 263rpx;
+  height: 263rpx;
+}
+
+.home_goods_b_info {
+  padding: 30rpx 40rpx;
+}
+
+.home_goods_b_name {
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+
+.home_goods_b_price {
+  font-size: 24rpx;
+  margin-top: 30rpx;
+  color: #ff554a;
+}
